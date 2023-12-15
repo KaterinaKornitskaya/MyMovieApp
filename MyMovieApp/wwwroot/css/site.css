@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+   /* border: 4px solid red;*/
+    background: rgb(39, 99, 110);
+}
+
+main {
+    /*border: 2px solid green;*/
+}
+
+h1 {
+    background: rgba(19, 37, 40, 1);
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    border-radius: 8px;
+    font-size: 26px;
+}
+
+h2 {
+    background: rgba(19, 37, 40, 1);
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    border-radius: 8px;
+    font-size: 24px;
+}
+
+.pCreate {
+    background: rgba(31, 68, 75, 1);
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pCreate a{
+    text-decoration: none;
+    color: rgba(19, 37, 40, 1);
+    transition: 0.5s;
+    
+}
+
+.pCreate a:hover{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+#sectForFilms {
+    /*border: 1px solid blue;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.divForOneFilm {
+    /*background: red;*/
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.divForOneFilmInside {
+    background: rgba(47, 169, 192, 0.2);
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.divForOneFilmInside:hover {
+    background: rgba(47, 169, 192, 0.6);
+    transition: 0.5s;
+}
+.divForImg{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+}
+
+.filmPoster {
+    
+    width: 100%;
+    background-position: center center;
+    margin: 0% auto;
+}
+
+.divForTextUnderPoster {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-top: 0.5em;
+    background: rgba(31, 68, 75, 1);
+}
+
+
+.filmYear, .filmTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-right: 0.5em;
+    padding: 0.2em 0.5em;
+    border-radius: 8px;
+}
+
+span.material-symbols-outlined {
+    font-size: 2em;
+}
+
+.aUnderPoster {
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    color: rgba(19, 37, 40, 1);
+    transition: 0.5s;
+}
+
+.aUnderPoster:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+#sectForDetails, #sectForEdit, #sectForDelete, #sectForCreate {
+    width: 100%;
+    background: rgba(19, 37, 40, 0.5);
+    color: white;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+.divForOperations{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Operations {
+    color: rgba(19, 37, 40, 1);
+}
+
+.Operations a {
+    text-decoration: none;
+    color: rgba(19, 37, 40, 1);
+    font-size: 20px;
+    padding: 0.5em;
+    transition: 0.5s;
+}
+
+.Operations a:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+.row {
+    /*border: 1px solid blue;*/
+    padding: 1em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.col-md-4 {
+    /*border: 1px solid red;*/
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    /*border: 2px solid red;*/
+    padding: 0.5em;
+}
+
+.form-group input{
+    width: 80%;
+    margin-left: 2em;
+    background: rgba(19, 37, 40, 0.5);
+    color: white;
+    border: none;
+}
+
+.form-groupBtn input {
+    background: rgba(19, 37, 40, 1);
+}
+
+.btn.btn-danger{
+    margin-right: 1em;
+}
+
+
+header {
+    background: rgba(19, 37, 40, 1);
+    padding: 2em;
+    margin-bottom: 0.5em;
+}
+
+header div {
+    width: 75%;
+    margin: 0 auto;
+}
+
+header div a{
+    padding-left: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+header div a:hover{
+    color: white;
+}
+
+footer {
+    background: rgba(19, 37, 40, 1);
+    text-align: center;
+    
+}
+footer .container{
+    color: white;
+}

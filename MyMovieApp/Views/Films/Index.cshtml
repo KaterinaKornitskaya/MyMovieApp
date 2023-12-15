@@ -1,0 +1,153 @@
+﻿@model IEnumerable<MyMovieApp.Models.Film>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Мой топ-10 фильмов</h1>
+
+<p class="pCreate">
+    <a asp-action="Create">Добавить новый</a>
+</p>
+
+<section id="sectForFilms">
+    @foreach(var item in Model)
+    {
+        <div class="divForOneFilm">
+            <div class="divForOneFilmInside">
+
+               
+           
+                <div class="divForImg">
+                    @if (@item.Name == "Мовчання ягнят")
+                    {
+                        <image src="/img/img4.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Зелена миля")
+                    {
+                        <image src="/img/img7.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Недоторканні / 1+1")
+                    {
+                        <image src="/img/img2.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Реквієм по мрії")
+                    {
+                        <image src="/img/img8.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Острів проклятих")
+                    {
+                        <image src="/img/img1.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Віднесені вітром")
+                    {
+                        <image src="/img/img3.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "12 років рабства")
+                    {
+                        <image src="/img/img5.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Володар перснів: Хранителі персня")
+                    {
+                        <image src="/img/img10.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Володар перснів: Дві вежі")
+                    {
+                        <image src="/img/img9.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    @if (@item.Name == "Володар перснів: Повернення короля")
+                    {
+                        <image src="/img/img6.jpg" alt="film_poster" class="filmPoster"></image>
+                    }
+                    
+                </div>
+                <div class="divForTextUnderPoster">
+                    <p class="filmTitle">
+                        @item.Name
+                       @*  @Html.DisplayFor(model => item.Name) *@
+                    </p>
+               
+                    <p class="filmYear">
+                        @item.Year
+                    </p>
+
+                
+                   @*  <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> | *@
+                    <a asp-action="Details" asp-route-id="@item.ID" class="aUnderPoster">
+                        <span class="material-symbols-outlined">more_horiz</span>
+                    </a>                    
+                    @* | *@
+                   @*  <a asp-action="Delete" asp-route-id="@item.ID">Delete</a> *@
+                
+               
+                </div>
+            </div>
+
+        </div>
+    }
+
+</section>
+
+@* 
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Director)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Actors)
+            </td>
+            <td>
+                    <image src="img/1574278222-1.jpg"></image>
+              
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table> *@
