@@ -61,7 +61,7 @@ namespace MyMovieApp.Controllers
             IFormFile uploadedFile)
         {
            
-            if (FilmExists3(film.Name, film.Director, film.ID))
+            if (FilmExists4(film.Name, film.Director))
                 ModelState.AddModelError("", "Комбинация такого названия и режиссера уже есть!" +
                     " Введите другое название, или другого режиссера.");
 
@@ -201,11 +201,17 @@ namespace MyMovieApp.Controllers
             return _context.Films.Any(e => e.ID == id);
         }
 
-        // проверка, что существует фильм с такой комбинацией имени и режиссера
+        // проверка, что существует фильм с такой комбинацией имени и режиссера, для Edit
         private bool FilmExists3(string name, string direct, int id)
         {
             return _context.Films.Any(e => e.Name == name && e.Director == direct
             && e.ID != id);
+        }
+
+        // проверка, что существует фильм с такой комбинацией имени и режиссера, для Create
+        private bool FilmExists4(string name, string direct)
+        {
+            return _context.Films.Any(e => e.Name == name && e.Director == direct);
         }
     }
 }
