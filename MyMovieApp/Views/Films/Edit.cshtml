@@ -11,6 +11,7 @@
     <div>
         <div class="divForOperations">
             <h4>@Html.DisplayFor(model => model.Name)</h4>
+            
             <div class="Operations">
                 <a asp-action="Index">Назад к списку</a>
             </div>
@@ -18,9 +19,14 @@
    
        
         <hr />
-        <div class="row">
+        <div class="row edit">
+            <div class="imgInEdit">
+                <div>
+                    <image src="@Html.DisplayFor(model => model.Image)" class="posterInEdit"></image>
+                </div>
+            </div>
             <div class="col-md-4">
-                <form asp-action="Edit">
+                <form asp-action="Edit" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="ID" />
                     
@@ -57,9 +63,11 @@
                     </div>
                     <div class="form-group">
                         <label @* asp-for="Image" *@ class="control-label">Постер</label>
-                        <input asp-for="Image" class="form-control" />
+                        <input asp-for="Image" class="form-control" type="hidden" />
+                        <input type="file" name="uploadedFile" asp-for="Image" class="form-control" />
                         <span asp-validation-for="Image" class="text-danger"></span>
                     </div>
+                    
                     <div class="form-group form-groupBtn">
                         <input type="submit" value="Save" class="btn btn-primary" />
                     </div>
