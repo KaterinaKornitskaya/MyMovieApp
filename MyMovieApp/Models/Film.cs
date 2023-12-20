@@ -25,8 +25,7 @@ namespace MyMovieApp.Models
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
         public string? Actors { get; set; }  // описание
-
-       
+      
         public string? Image { get; set; }  // путь к картинке
     }
 }

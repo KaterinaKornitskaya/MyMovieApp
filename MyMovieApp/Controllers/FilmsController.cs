@@ -86,13 +86,6 @@ namespace MyMovieApp.Controllers
         }
 
 
-        //[AcceptVerbs("Get", "Post")]
-        //public IActionResult CheckName(string name)
-        //{
-        //    if (FilmExists2(name))
-        //        return Json(false);
-        //    return Json(true);
-        //}
 
         // GET: Films/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -131,7 +124,6 @@ namespace MyMovieApp.Controllers
 
             if (ModelState.IsValid)
             {
-
                 if (uploadedFile != null)
                 {
                     string path = "/img/" + uploadedFile.FileName;
